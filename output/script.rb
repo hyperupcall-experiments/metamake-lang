@@ -1,12 +1,18 @@
 #!/usr/bin/env ruby
+# using indents
 # deno-lint-ignore-file
-# START HERE
-a = "Hello, "
-b = "World!"
+
+def add(a, b)
+	result = a + b
+	return result
+end
+
 def string_concat(left, right)
 	result = left + right
 	return result
-end 
+end
 
+a = "Hello, "
+b = "World!"
 s = string_concat(a, b)
 puts(s)

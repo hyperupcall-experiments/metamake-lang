@@ -1,10 +1,21 @@
-#!/usr/bin/env -S java --source 11	
+#!/usr/bin/env -S java --source 11
+// using indents
 // deno-lint-ignore-file
-// START HERE
+
+int add(a, b) {
+	var result = a + b
+	return result
+}
+	
+
+str string_concat(left, right) {
+	var result = left + right
+	return result
+}
+	
+
 class Program {
-			UNKNOWN_LANGUAGE_FUNCTION
- 
-var a = "Hello, "
+	var a = "Hello, "
 var b = "World!"
 var s = string_concat(a, b)
 System.out.println(s)

@@ -14,14 +14,14 @@ task.m4() {
 	for script in "${scripts[@]}"; do
 		m4 \
 			--define=ARG_LANGUAGE="${map[$script]}" \
-			./compiler.m4 \
+			./script.m4 \
 			> ./output/"$script"
 	done
 	printf '%s\n' "Compiled M4."
 	for script in "${scripts[@]}"; do
-		chmod +x "$script"
+		chmod +x ./output/"$script"
 		printf '%s\n' "-> $script"
-		"$script"
+		./output/"$script"
 		printf '%s\n' "---"
 	done
 }
